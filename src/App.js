@@ -24,7 +24,7 @@ function App() {
                 input2 = event.target.value;
             }}/>
 
-            {customHTML?<a href={'data:text/html,'+customHTML} download='mycustomhtml.html'>Download</a>:<input type='button' value="Generate" onClick={download}/>}
+            {customHTML?<a href={'data:text/html,'+escape(customHTML)} download='mycustomhtml.html'>Download</a>:<input type='button' value="Generate" onClick={download}/>}
         </div>
     );
 }
